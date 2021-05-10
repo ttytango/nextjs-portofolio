@@ -1,0 +1,21 @@
+.cardList {
+    // align-content: flex-start;
+    direction: row;
+    width: 10%;
+    gap: 3rem;
+    width: 80%;
+    // text-align: center;
+    margin: 1rem auto;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 80%;
+    height: 40%;
+    margin: 4rem auto;
+    // grid-template-columns: repeat(100px, 2fr);
+    // grid-template-rows: minmax(100px, 1fr);
+}

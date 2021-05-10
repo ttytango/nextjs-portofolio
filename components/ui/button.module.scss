@@ -1,0 +1,24 @@
+@import "../../styles/variables";
+.button {
+    cursor: pointer;
+    background: #27d6b0;
+    border: 1px solid #27d6b0;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    color: #3f5012;
+    font-size: 1.2rem;
+    text-align: center;
+    //color: rgb(19, 30, 65);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.button:hover {
+    background: #79f5da;
+    border: 1px solid #79f5da;
+}
+
+.button:active {
+    background: #27d6c8;
+    border: 27d6c8;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}

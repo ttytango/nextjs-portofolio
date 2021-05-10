@@ -1,0 +1,9 @@
+@import '../../styles/variables';
+.card {
+    height: 40vh;
+    width: 80%;
+    margin: 1.6rem auto;
+    padding: 1rem;
+    background: $persian-blue;
+    border-radius: $default-card-border-radius;
+}
