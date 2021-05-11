@@ -12,17 +12,20 @@ export default function LogoCard(props) {
 		event.preventDefault();
 		setIsOpen(true);
 	}
+	const modalClose = () => {
+		setIsOpen(false);
+	}
 
 	if (isOpen === true) {
-		return <Modal key={id} title={title} description={description}/>
+		return <Modal key={id} title={title} description={description} onClose={modalClose}  onBlur={modalClose} setIsOpen={setIsOpen}/>
 	}
 
 
 		return (
 			<div className={styles.smallLogoCard} key={id}>
-				<img src={icon} alt={title}/>
+				<img src={icon} alt={title} className={styles.logo}  onClick={modalHandler}/>
 				<h3>{title}</h3>
-				<button onClick={modalHandler}>Button</button>
+				{/*<button>More</button>*/}
 			</div>
 		);
 	}

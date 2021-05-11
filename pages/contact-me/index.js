@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import styles from "./contact-me.module.scss";
 import Button from "../../components/ui/button";
-import Modal from "../../components/ui/modal";
 
 export default function ContactPage() {
 	const nameInputRef = useRef();

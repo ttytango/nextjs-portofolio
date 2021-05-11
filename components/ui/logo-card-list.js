@@ -11,7 +11,7 @@ const skills = [
 	},
 	{
 		id: "2",
-		name: "Vercel",
+		name: "CSS 3",
 		icon: "/images/css-3.svg",
 		description: "Some Next Stuff",
 	},
@@ -45,12 +45,35 @@ const skills = [
 		icon: "/images/node.svg",
 		description: "I use NodeJS and Express and am advanced in the use of related technologies and frameworks for both backend tasks and full-stack development.",
 	},
+	{
+		id: "8",
+		name: "Git",
+		icon: "/images/git-black.svg",
+		description: 	"I competently and frequently use git and the git bash command line as an effective Version Control System and for collaboration.",
+	},
+	{
+		id: "9",
+		name: "Svelte",
+		icon: "/images/svelte.svg",
+		description: "Svelte is a unique, reactive Javascript web framework that is incredibly lightweight and surprisingly powerful. I often use Svelte and the related Sapper framework, which is built on Svelte, but is still very much in development, for rapid prototyping.",
+	},
+	{
+		id: "10",
+		name: "Bootstrap",
+		icon: "/images/bootstrap-5.svg",
+		description: "I am familiar with employing the use of third-party CDN's several UI libraries including Bootstrap, Semantic-UI and FontAwesome among others to optimise client-side loading speed. Why re-invent the wheel?",
+	},	{
+		id: "11",
+		name: "Linux/Debian/\nUbuntu",
+		icon: "/images/cof_orange_hex.svg",
+		description: "Linux!",
+	},
 ];
 export default function LogoCardList() {
 	return (
-		<section>
+		<section className={styles.main}>
 			<h1>Tech Stack</h1>
-			<div className={styles.cardList}>
+			{/*<div className={styles.cardList}>*/}
 				<div className={styles.list}>
 					{skills.map((skill) => {
 						return (
@@ -63,7 +86,7 @@ export default function LogoCardList() {
 						);
 					})}
 				</div>
-			</div>
+			{/*</div>*/}
 		</section>
 	);
 }

@@ -3,8 +3,13 @@
     text-align: center;
     background: $sky-blue-crayola;
     padding: 1.2rem 1.4rem;
+    box-shadow: $default-box-shadow;
+    button {
+        border-style: none;
+    }
 }
 
 .project h2 {
     font-size: 1.6rem;
 }
+

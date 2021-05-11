@@ -1,15 +1,18 @@
 @import "../../styles/variables";
+@import "../../styles/animations";
+
 .smallLogoCard {
-    position: inherit;
+    position: relative;
     min-height: 10vh;
-    width: 10vw;
+    width: 220px;
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
-    border-style: 1px solid #eaea;
+    border: 1px solid rgba($black, 0.12);
     align-items: stretch;
-    align-content: flex-start;
-    justify-content: space-evenly;
-    background-color: rgb(170, 106, 106);
+    align-content: center;
+    justify-content: space-around;
+    background-color: rgba(158, 15, 1, 0.48);
     border-radius: $default-card-border-radius*2;
     cursor: pointer;
     box-shadow: 1px 1px 5px 1px rgba(116, 77, 77, 0.5);
@@ -17,25 +20,53 @@
     font-weight: bold;
     font-size: 1.2rem;
     outline: none;
-    border: none;
+    transition: all 1s ease-out;
+
+
+    //border: none;
+    .logo {
+        z-indez: -200;
+        background: radial-gradient(to bottom right, rgba($slate-blue, 0.4) 2% 5%, $dodger-blue 30% 50%);
+        drop-shadow: 2px 2px 5px $black;
+        transition: all 1s ease-out;
+
+        &:hover {
+            animation-name: logoanimate;
+            animation-duration: .8s;
+        }
+        &:active {
+            filter: drop-shadow(0px 0px 0px);
+        }
+
+        //filter: sepia(0.2) hue-rotate(30deg) drop-shadow(-2px 1px 4px rgba($black, 0.6));
+
+    }
     img,svg {
-        position: sticky;
+        //position: sticky;
         image-orientation: flex;
         object-fit: contain;
         padding: 1rem 2rem;
         margin: 1rem 2rem;
-        box-shadow: 2px 2px 0px rgba(78, 78, 52, 0.623); // size:
+        box-shadow: 2px 2px 0px rgba(78, 78, 52, 0.63); // size:
         overflow: hidden;
-        filter: sepia(0.6) hue-rotate(-90deg);
+        filter: sepia(0.2) hue-rotate(30deg) drop-shadow(2px 2px 6px rgba($black, 0.6));
+        &:hover {
+            //animation-name: logoanimate;
+            //animation-duration: ;
+            //animation-timing-function: linear;
+            animation: logoanimate .2s backwards;
+        }
     }
     //svg{
     //
     //}
-}
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    //button {
+    //    padding: 0.2rem 0.4rem;
+    //    margin: 1rem;
+    //    cursor: pointer;
+    //    border-radius: $default-card-border-radius*2;
+    //    outline: none;
+    //    border: none;
+    //
+    //}
 }

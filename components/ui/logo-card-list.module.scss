@@ -1,12 +1,13 @@
-.cardList {
-    // align-content: flex-start;
-    direction: row;
-    width: 10%;
-    gap: 3rem;
-    width: 80%;
-    // text-align: center;
-    margin: 1rem auto;
-}
+//.cardList {
+//    // align-content: flex-start;
+//    direction: row;
+//    //width: 10%;
+//    gap: 3rem;
+//    width: 80vw;
+//    // text-align: center;
+//    margin: 1rem 0;
+//}
+//
 
 .list {
     display: flex;
@@ -15,7 +16,5 @@
     gap: 2rem;
     width: 80%;
     height: 40%;
-    margin: 4rem auto;
-    // grid-template-columns: repeat(100px, 2fr);
-    // grid-template-rows: minmax(100px, 1fr);
+    margin: 0.5rem auto;
 }

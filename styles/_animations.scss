@@ -1,0 +1,28 @@
+@keyframes logoanimate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  35% {
+    filter: hue-rotate(-45deg);
+  }
+  40% {
+    // border-radius: 32px;
+    filter: hue-rotate(-90deg) opacity(0.8);
+  }
+  45% {
+    //border-radius: 20px;
+    filter: hue-rotate(-45degdeg) opacity(0.8);
+    transform: translateX(20px);
+  }
+  50% {
+    // border-radius: 32px;
+    filter: hue-rotate(-90deg) opacity(0.8);
+  }
+  65% {
+    filter: hue-rotate(-45deg);
+  }
+  80% {
+    filter: hue-rotate(-20deg);
+  }
+
+}
