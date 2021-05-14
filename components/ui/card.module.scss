@@ -1,9 +1,10 @@
 @import '../../styles/variables';
 .card {
-    height: 40vh;
-    width: 80%;
+    min-height: 40vh;
+    width: 90%;
     margin: 1.6rem auto;
     padding: 1rem;
     background: $persian-blue;
     border-radius: $default-card-border-radius;
+    box-shadow: $default-box-shadow;
 }

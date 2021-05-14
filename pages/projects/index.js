@@ -4,21 +4,8 @@ import Link from "next/link";
 // import useSWR from "swr";
 import { getAllProjects } from "../../helpers/api-utils";
 import styles from "./projectList.module.scss";
-import Button from "../../components/ui/button";
-
-//
-// const projectData = [
-// 	{
-// 		id: "p1",
-// 		title: "Some great project",
-// 		description: "This was a great project to get involved in",
-// 	},
-// 	{
-// 		id: "p2",
-// 		title: "Another project",
-// 		description: "This was another great project to get involved in",
-// 	},
-// ];
+// import Button from "../../components/ui/button";
+// import buttonStyles from "../../components/ui/button.module.scss";
 
 function ProjectsPage(props) {
 	const projects = props.myProjects;
@@ -72,10 +59,14 @@ function ProjectsPage(props) {
 			<ul className={styles.projectList}>
 				{projects.map((project) => {
 					return (
-						<li id={project.id} key={project.id}>
+						<li
+							id={project.id}
+							key={project.id}
+							className={styles.projectListItem}
+						>
 							<p>{project.title}</p>
 							<Link href={`/projects/${encodeURIComponent(project.id)}`}>
-								View Project
+								<button className={styles.button}>View Project</button>
 							</Link>
 						</li>
 					);

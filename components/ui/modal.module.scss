@@ -1,46 +1,45 @@
 @import "../../styles/variables";
 .modal {
-  position: fixed;
-  z-index: 100;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.8);
-
-
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
 }
-.modalTitle{
-  font-size: 1.6rem;
-  text-align: center;
-  margin: auto;
+
+.modalTitle {
+    font-size: 1.6rem;
+    text-align: center;
+    margin: auto;
 }
+
 .modalContent {
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #003df8;
-  width: 80vmin;
-  text-align: justify;
-  background-color: $blue-jeans;
-  border-radius: $default-card-border-radius*4;
-  box-shadow: 2px 2px 3px rgba($black, 0.5);
-
-
-  .spanClose {
-    display: flex;
-    flex-direction: row;
-    vertical-align: top;
-    justify-content: flex-end;
-    .closeButton {
-      background-color: rgba(140, 16, 16, 0.76);
-      font-size: 1.4rem;
-      padding: 0.2rem 0.6rem;
-      color: #fefefe;
-      cursor: pointer;
-      border-radius: $default-card-border-radius*2;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #003df8;
+    width: 80vmin;
+    text-align: justify;
+    background-color: $blue-jeans;
+    border-radius: $default-card-border-radius*4;
+    box-shadow: 2px 2px 3px rgba($black, 0.5);
+    .spanClose {
+        display: flex;
+        flex-direction: row;
+        vertical-align: top;
+        justify-content: flex-end;
+        .closeButton {
+            background-color: rgba(236, 69, 57, 0.76);
+            font-size: 1.4rem;
+            padding: 0.2rem 0.6rem;
+            color: #fefefe;
+            cursor: pointer;
+            outline: none;
+            border-radius: $default-card-border-radius*2;
+        }
     }
-  }
-
 }

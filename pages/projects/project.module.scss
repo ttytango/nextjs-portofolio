@@ -1,12 +1,47 @@
 @import "../../styles/variables";
 .project {
     text-align: center;
-    background: $sky-blue-crayola;
+    background: $medium-turquoise;
     padding: 1.2rem 1.4rem;
     box-shadow: $default-box-shadow;
+    min-height: 60vh;
+    border-radius: $default-card-border-radius;
     button {
         border-style: none;
     }
+    .backButton {
+        width: 40%;
+        background: $blue-jeans;
+        padding: 0.4rem 1rem;
+        box-shadow: $default-box-shadow;
+        border-radius: $default-card-border-radius*2;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        &:hover {
+            background: #79f5da;
+            //border: 1px solid #79f5da;
+        }
+
+        &:active {
+            background: #27d6c8;
+            //border: 27d6c8;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+        }
+    }
+}
+
+.buttonGroup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 30vh;
+    gap: 2rem;
+    background: rgba($aquamarine, 0.4);
+    border-radius: $default-card-border-radius*2;
+    padding: 1rem 0;
+
 }
 
 .project h2 {
