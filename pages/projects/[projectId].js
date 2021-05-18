@@ -30,7 +30,6 @@ function ProjectDetailPage(props) {
 						<Link href={`/projects`}>
 							<a className={styles.backButton}>Back to Projects</a>
 						</Link>
-
 						{project.url ? (
 							<Link href={`${project.url}`}>
 								<a className={styles.backButton}>View Live Project</a>
