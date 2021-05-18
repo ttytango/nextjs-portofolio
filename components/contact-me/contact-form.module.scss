@@ -1,0 +1,54 @@
+@import "../../styles/variables";
+.contactForm {
+    background: $aquamarine;
+    width: 90%;
+    margin: 1rem auto;
+    box-shadow: $default-box-shadow;
+    .submitFormButton {
+        padding: 1rem 0;
+    }
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 7 0vw;
+    margin: 0.5rem auto;
+    padding: 1rem;
+    // justify-content: space-between;
+    // align-content: space-around;
+    gap: 1rem;
+    // align-items: flex-start;
+    label,
+    input {
+        align-items: flex-start;
+        padding: 0 1rem;
+        margin: 1.2rem auto;
+        width: 80%;
+        height: 4vh;
+    }
+    label {
+        align-self: center;
+        font-size: 1.6rem;
+    }
+    input,
+    textarea {
+        filter: opacity(.8);
+        -webkit-filter: opacity(.8);
+        transition: all .2s linear;
+        &:focus {
+            filter: opacity(1);
+            -webkit-filter: opacity(1);
+        }
+    }
+    input {
+        // width: 100%;
+        // height: 4vh;
+    }
+    textarea {
+        width: 80%;
+        padding: 0.5rem 1rem;
+        margin: 1.2rem auto;
+    }
+}

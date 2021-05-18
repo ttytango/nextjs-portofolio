@@ -1,16 +1,18 @@
-import { useRef } from "react";
+// import { useRef } from "react";
 import styles from "./contact-me.module.scss";
-import Button from "../../components/ui/button";
+// import Button from "../../components/ui/button";
+import ContactForm from "../../components/contact-me/contact-form";
 
 export default function ContactPage() {
-	const nameInputRef = useRef();
-	const emailInputRef = useRef();
-	const descriptionInputRef = useRef();
+	// const nameInputRef = useRef();
+	// const emailInputRef = useRef();
+	// const descriptionInputRef = useRef();
 	return (
 		<div className={styles.contact}>
 			<h1>Contact Me</h1>
+			<ContactForm />
 			{/*<Modal>Hello</Modal>*/}
-			<form>
+			{/* <form>
 				<div className={styles.control}>
 					<label htmlFor="name">Name: </label>
 					<input
@@ -32,7 +34,7 @@ export default function ContactPage() {
 					/>
 				</div>
 				<div className={styles.control}>
-					{/* <label htmlFor="description"></label> */}
+					{/* <label htmlFor="description"></label>
 					<textarea
 						rows="5"
 						cols="80"
@@ -44,7 +46,7 @@ export default function ContactPage() {
 				<div>
 					<Button>Submit Form</Button>
 				</div>
-			</form>
+			</form> */}
 		</div>
 	);
 }
