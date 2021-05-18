@@ -8,6 +8,9 @@ body {
 body {
     background: repeating-linear-gradient(to top left, #fff 10% 20%, #f3f3f3 25% 40%, #f8f7d1 40% 100%);
     font-size: calc(10px + 2vmin);
+    &:not(footer) {
+        font-size: 1.2rem;
+    }
 }
 
 a {

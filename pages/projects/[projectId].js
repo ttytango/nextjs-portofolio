@@ -27,17 +27,20 @@ function ProjectDetailPage(props) {
 					<h2>{project.title}</h2>
 					<p>{project.description}</p>
 					<div className={styles.buttonGroup}>
-
-						<Link href={`/projects`}><a className={styles.backButton}>Back to Projects</a></Link>
-
+						<Link href={`/projects`}>
+							<a className={styles.backButton}>Back to Projects</a>
+						</Link>
 
 						{project.url ? (
-							<Link href={`${project.url}`}><a className={styles.backButton}>View Live Project</a></Link>
+							<Link href={`${project.url}`}>
+								<a className={styles.backButton}>View Live Project</a>
+							</Link>
 						) : null}
 						{project.sourceCode ? (
-							<Link href={`${project.sourceCode}`}><a className={styles.backButton}>View Code on Github</a></Link>
+							<Link href={`${project.sourceCode}`}>
+								<a className={styles.backButton}>View Code on Github</a>
+							</Link>
 						) : null}
-
 					</div>
 				</div>
 			</Card>
@@ -57,8 +60,6 @@ export async function getStaticProps(context) {
 
 	const project = await getProjectById(projectId);
 	// const { params, req, res } = context;
-
-	// console.log("Server Side Code");
 
 	return {
 		props: {
