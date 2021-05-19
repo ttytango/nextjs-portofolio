@@ -10,19 +10,29 @@
         border-style: none;
     }
     .backButton {
+        background: rgb(235, 92, 92);
+        &:hover {
+            background: rgba(25, 255, 255, 0.5);
+            //border: 1px solid #79f5da;
+        }
+    }
+    .linkButton {
+        background: $navbar-green;
+        &:hover {
+            background: rgba(25, 255, 255, 0.5);
+            // background: #79f5da;
+            //border: 1px solid #79f5da;
+        }
+    }
+    .linkButton,
+    .backButton {
         width: 40%;
-        background: $blue-jeans;
         padding: 0.4rem 1rem;
         box-shadow: $default-box-shadow;
         border-radius: $default-card-border-radius*2;
         display: flex;
         justify-content: center;
         gap: 2rem;
-        &:hover {
-            background: #79f5da;
-            //border: 1px solid #79f5da;
-        }
-
         &:active {
             background: #27d6c8;
             //border: 27d6c8;
@@ -31,7 +41,7 @@
     }
 }
 
-.buttonGroup{
+.buttonGroup {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,10 +51,8 @@
     background: rgba($aquamarine, 0.4);
     border-radius: $default-card-border-radius*2;
     padding: 1rem 0;
-
 }
 
 .project h2 {
     font-size: 1.6rem;
 }
-

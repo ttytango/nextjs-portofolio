@@ -1,7 +1,7 @@
 // import { useEffect, usseState } from "react";
 // import { useRouter } from "next/router";
 import Link from "next/link";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 // import useSWR from "swr";
 import { getAllProjects } from "../../helpers/api-utils";
 import styles from "./projectList.module.scss";
@@ -19,13 +19,14 @@ function ProjectItem(props) {
 
 function ProjectsPage(props) {
 	const projects = props.myProjects;
+	// SWITCH TO useRouter IF ADDING IN A FILTER FOR KEYWORDS and useSWR for client-side data-fetching
 	// const [projects, setProjects] = useState(props.fetchedProjects);
-	const router = useRouter();
+	// const router = useRouter();
 
-	function keywordHandler(keyword) {
-		const fullPath = `/projects/${keyword}`;
-		router.push(fullPath);
-	}
+	// function keywordHandler(keyword) {
+	// 	const fullPath = `/projects/${keyword}`;
+	// 	router.push(fullPath);
+	// }
 	// const projectId = router.query.id;
 
 	// const { data, error } = useSWR(
@@ -81,7 +82,19 @@ function ProjectsPage(props) {
 							key={project.id}
 							className={styles.projectListItem}
 						>
-							<p>{project.title}</p>
+							<h3>{project.title}</h3>
+							<span className={styles.toolsContainer}>
+								<div>
+									<h5>Principle Tools Used:</h5>
+									<ul>
+										{project.tags.map((data, key, tag) => {
+											return <li key={tag.id}>{tag[key]}</li>;
+										})}
+									</ul>
+								</div>
+								<div className={styles.imageContainer}>Hello</div>
+							</span>
+
 							<Link href={`/projects/${encodeURIComponent(project.id)}`}>
 								<button className={styles.button}>View Project</button>
 							</Link>

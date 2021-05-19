@@ -27,15 +27,12 @@ function ProjectDetailPage(props) {
 					<h2>{project.title}</h2>
 					<p>{project.description}</p>
 					<div className={styles.buttonGroup}>
-						<Link href={`/projects`}>
-							<a className={styles.backButton}>Back to Projects</a>
-						</Link>
-						{project.url ? (
+						{project.isLive ? (
 							<a
 								target="_blank"
 								href={`${project.url}`}
 								rel="noopener noreferrer"
-								className={styles.backButton}
+								className={styles.linkButton}
 							>
 								View Live Project
 							</a>
@@ -45,11 +42,14 @@ function ProjectDetailPage(props) {
 								target="_blank"
 								href={`${project.sourceCode}`}
 								rel="noopener noreferrer"
-								className={styles.backButton}
+								className={styles.linkButton}
 							>
 								View Code on Github
 							</a>
 						) : null}
+						<Link href={`/projects`}>
+							<a className={styles.backButton}>Back to Projects</a>
+						</Link>
 					</div>
 				</div>
 			</Card>

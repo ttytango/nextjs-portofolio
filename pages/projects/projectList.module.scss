@@ -41,8 +41,31 @@
     }
 }
 
-.projectListItem {
+// .projectListItem {
+//     width: 80%;
+// }
+.toolsContainer {
     width: 80%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 auto;
+    @media (min-width: 900px) {
+        flex-direction: row;
+    }
+}
+
+.imageContainer {
+    margin: 1rem auto;
+    color: $white;
+    background: $black;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: 768px) {
+        width: 300px;
+        height: 300px;
+    }
 }
 
 .button {
@@ -65,6 +88,6 @@
 
 .button:active {
     background: #27d6c8;
-    border: 27d6c8;
+    border: 1px solid #27d6c8;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
