@@ -1,6 +1,6 @@
 @import "../../styles/variables";
 .contactForm {
-    background: $aquamarine;
+    background: linear-gradient(to top, $black 14%, rgba($aquamarine, .7) 14% 70%, $aquamarine-light 40%);
     width: 90%;
     margin: 1rem auto;
     box-shadow: $default-box-shadow;
@@ -13,24 +13,25 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    width: 7 0vw;
+    width: 70vw;
     margin: 0.5rem auto;
     padding: 1rem;
     // justify-content: space-between;
     // align-content: space-around;
-    gap: 1rem;
+    // gap: 1rem;
     // align-items: flex-start;
     label,
     input {
         align-items: flex-start;
         padding: 0 1rem;
-        margin: 1.2rem auto;
-        width: 80%;
+        margin: 0.8rem auto;
+        min-width: 40%;
+        max-width: 80%;
         height: 4vh;
     }
     label {
         align-self: center;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
     input,
     textarea {

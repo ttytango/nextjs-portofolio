@@ -6,8 +6,21 @@ function ContactForm() {
 	const nameInputRef = useRef();
 	const emailInputRef = useRef();
 	const descriptionInputRef = useRef();
+
+	function submitMessageHandler(event) {
+		event.preventDefault();
+		const nameInput = nameInputRef.current.value;
+		const emailInput = emailInputRef.current.value;
+		const descriptionInput = descriptionInputRef.current.value;
+		const message = {
+			name: nameInput,
+			email: emailInput,
+			description: descriptionInput,
+		};
+		console.log(message);
+	}
 	return (
-		<form className={styles.contactForm}>
+		<form className={styles.contactForm} onSubmit={submitMessageHandler}>
 			<div className={styles.control}>
 				<label htmlFor="name">Name: </label>
 				<input
@@ -39,7 +52,7 @@ function ContactForm() {
 				/>
 			</div>
 			<div className={styles.submitFormButton}>
-				<Button>Submit Form</Button>
+				<Button>Submit</Button>
 			</div>
 		</form>
 	);

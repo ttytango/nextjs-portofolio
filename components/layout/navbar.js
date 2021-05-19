@@ -5,7 +5,7 @@ export default function Navbar() {
 	return (
 		<header className={styles.header}>
 			<div className={styles.brand}>
-				<Link href="/">Home</Link>
+				<Link href="/">TJ Simonson</Link>
 			</div>
 			<nav>
 				<ul className={styles.topNavButtons}>

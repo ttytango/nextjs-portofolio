@@ -31,14 +31,24 @@ function ProjectDetailPage(props) {
 							<a className={styles.backButton}>Back to Projects</a>
 						</Link>
 						{project.url ? (
-							<Link href={`${project.url}`}>
-								<a className={styles.backButton}>View Live Project</a>
-							</Link>
+							<a
+								target="_blank"
+								href={`${project.url}`}
+								rel="noopener noreferrer"
+								className={styles.backButton}
+							>
+								View Live Project
+							</a>
 						) : null}
 						{project.sourceCode ? (
-							<Link href={`${project.sourceCode}`}>
-								<a className={styles.backButton}>View Code on Github</a>
-							</Link>
+							<a
+								target="_blank"
+								href={`${project.sourceCode}`}
+								rel="noopener noreferrer"
+								className={styles.backButton}
+							>
+								View Code on Github
+							</a>
 						) : null}
 					</div>
 				</div>
