@@ -7,9 +7,45 @@
         padding: 1rem 0.4rem;
         border-radius: $default-card-border-radius*4;
         h1 {
-            margin: 1rem auto;
+            color: $black;
+            background: lighten($color-tertiary-light, 16%);
+            // padding: 1rem 4rem;
+            margin: 1rem 1rem;
+            padding: 1rem;
             letter-spacing: .2rem;
+            border: 1px solid $color-tertiary-dark;
+            text-transform: uppercase;
+        }
+        p {
+            // letter-spacing: .2rem;
+            margin: 1rem 1rem;
+            padding: 1rem;
+            background: $black;
+            color: $white;
+            border: 1px solid $white;
+        }
+        h2 {
+            background: $black;
+            color: $white;
+            margin: 1rem 1rem;
+            padding: 1rem;
+        }
+        @media(min-width: 768px) {
+            h1 {
+                padding: 1rem 4rem;
+                margin: 1rem 2rem;
+            }
+            p,
+            h2 {
+                padding: 1rem 4rem;
+                margin: 1rem 8rem;
+            }
         }
     }
     
-    .title {}
+    .textContainer {
+        background: linear-gradient(to bottom right, $dodger-blue 85%, $persian-blue 84%);
+        // background: lighten($persian-blue, 10%);
+        margin: 1rem 2rem;
+        padding: 2rem;
+    }
