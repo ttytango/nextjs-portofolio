@@ -93,6 +93,7 @@ export default function LogoCardList() {
 				{skills.map((skill) => {
 					return (
 						<LogoCard
+							id={skill.id}
 							key={skill.id}
 							icon={skill.icon}
 							title={skill.name}

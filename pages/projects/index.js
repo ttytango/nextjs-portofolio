@@ -91,7 +91,11 @@ function ProjectsPage(props) {
 									<h4>Principle Tools Used:</h4>
 									<ul>
 										{project.tags.map((data, key, tag) => {
-											return <li key={tag.id}>{tag[key]}</li>;
+											return (
+												<li id={key} key={tag.id}>
+													{tag[key]}
+												</li>
+											);
 										})}
 									</ul>
 								</div>

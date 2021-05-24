@@ -1,7 +1,7 @@
 @import "../../styles/variables";
 .project {
     text-align: center;
-    background: $medium-turquoise;
+    background: $color-tertiary;
     padding: 1.2rem 1.4rem;
     box-shadow: $default-box-shadow;
     min-height: 60vh;
@@ -51,7 +51,7 @@
     justify-content: center;
     min-height: 30vh;
     gap: 2rem;
-    background: rgba($aquamarine, 0.4);
+    background: rgba($color-primary-light, 0.4);
     border-radius: $default-card-border-radius*2;
     padding: 1rem 0;
 }
