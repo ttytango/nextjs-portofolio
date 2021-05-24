@@ -1,13 +1,15 @@
 // import Head from "next/head";
 // import Image from "next/image";
 // import styles from "../styles/Home.module.css";
-import StringCapitaliseForm from "../components/string-formatter/string-format-form";
+// import StringCapitaliseForm from "../components/string-formatter/string-format-form";
+import AboutMe from "../components/home/about-me";
 
 export default function Home() {
 	return (
 		<div className="center">
-			<h1>Home</h1>
-			<StringCapitaliseForm />
+			{/* <h1>Home</h1> */}
+			<AboutMe />
+			{/* <StringCapitaliseForm /> */}
 		</div>
 		// <div className={styles.container}>
 		//   <Head>

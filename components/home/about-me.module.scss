@@ -1,0 +1,15 @@
+    @import "../../styles/variables";
+    .homeContent {
+        width: 90vw;
+        min-height: 40vw;
+        margin: 2rem auto;
+        background: $color-tertiary-dark;
+        padding: 1rem 0.4rem;
+        border-radius: $default-card-border-radius*4;
+        h1 {
+            margin: 1rem auto;
+            letter-spacing: .2rem;
+        }
+    }
+    
+    .title {}
