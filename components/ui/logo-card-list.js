@@ -73,7 +73,7 @@ const skills = [
 	},
 	{
 		id: "11",
-		name: "Linux/Debian/\nUbuntu",
+		name: "Linux/Ubuntu",
 		icon: "/images/cof_orange_hex.svg",
 		description: "Linux!",
 	},
@@ -87,7 +87,7 @@ const skills = [
 export default function LogoCardList() {
 	return (
 		<>
-			<h1>Killa Stack</h1>
+			<h1>Frequently Used Tools</h1>
 			{/*<div className={styles.cardList}>*/}
 			<div className={styles.list}>
 				{skills.map((skill) => {

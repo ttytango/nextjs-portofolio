@@ -1,3 +1,4 @@
+@import "../../styles/variables";
 //.cardList {
 //    // align-content: flex-start;
 //    direction: row;
@@ -13,14 +14,17 @@
     flex-direction: column;
     width: 50%;
     margin: 1rem auto;
+
 }
 
 .list {
+            // background: radial-gradient(ellipse, $color-tertiary-light 80%, $color-tertiary-dark);
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;
-    width: 100%;
-    height: 40%;
+    width: 60vw;
+    height: 30vh;
     margin: 0.5rem auto;
 }

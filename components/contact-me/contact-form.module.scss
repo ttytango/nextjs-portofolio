@@ -1,6 +1,7 @@
 @import "../../styles/variables";
 .contactForm {
-    background: linear-gradient(to top, $black 14%, rgba($color-primary-dark, .7) 14% 70%, $color-primary-dark 40%);
+    // background: linear-gradient(to top, $black 14%, rgba($color-primary-dark, .7) 14% 70%, $color-primary-dark 40%);
+    background: linear-gradient(to top, $black 10%, $color-four-dark 11% 40%);
     color: $white;
     width: 90%;
     margin: 1rem auto;
@@ -15,7 +16,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    width: 70vw;
+    // width: 70vw;
     margin: 0.5rem auto;
     // padding: 2rem;
     // justify-content: space-between;

@@ -24,9 +24,13 @@
     border: 1px solid #003df8;
     width: 80vmin;
     text-align: justify;
-    background-color: $blue-jeans;
+    color: $white;
+    background: $black;
     border-radius: $default-card-border-radius*4;
     box-shadow: 2px 2px 3px rgba($black, 0.5);
+    h1 {
+        color: $white;
+    }
     .spanClose {
         display: flex;
         flex-direction: row;
