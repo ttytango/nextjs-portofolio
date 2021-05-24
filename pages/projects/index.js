@@ -83,10 +83,12 @@ function ProjectsPage(props) {
 							key={project.id}
 							className={styles.projectListItem}
 						>
-							<h3>{project.title}</h3>
+							<div className={styles.projectTitle}>
+								<h2>{project.title}</h2>
+							</div>
 							<span className={styles.toolsContainer}>
 								<div>
-									<h5>Principle Tools Used:</h5>
+									<h4>Principle Tools Used:</h4>
 									<ul>
 										{project.tags.map((data, key, tag) => {
 											return <li key={tag.id}>{tag[key]}</li>;

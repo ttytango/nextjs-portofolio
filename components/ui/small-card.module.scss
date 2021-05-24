@@ -11,10 +11,11 @@
     align-items: stretch;
     align-content: center;
     justify-content: space-around;
-    background-color: rgba(158, 15, 1, 0.48);
+    // background-color: rgba(158, 15, 1, 0.48);
+    background-color: $color-tertiary-light;
     border-radius: $default-card-border-radius*2;
     cursor: pointer;
-    box-shadow: 1px 1px 5px 1px rgba(116, 77, 77, 0.5);
+    box-shadow: 1px 1px 5px 1px $color-tertiary-dark;
     color: $black;
     font-weight: bold;
     font-size: 1.2rem;
@@ -23,7 +24,7 @@
     //border: none;
     .logo {
         z-indez: -200;
-        background: radial-gradient(to bottom right, rgba($slate-blue, 0.4) 2% 5%, $dodger-blue 30% 50%);
+        background: radial-gradient(to bottom right, $color-four-light 80%, rgba($color-four, 0.6) 2% 5%);
         drop-shadow: 2px 2px 5px $black;
         transition: all 1s ease-out;
         &:hover {
@@ -42,15 +43,25 @@
         object-fit: contain;
         padding: 1rem 2rem;
         margin: 1rem 2rem;
-        box-shadow: 2px 2px 0px rgba(78, 78, 52, 0.63);
+        // box-shadow: 2px 2px 0px $color-secondary;
         overflow: hidden;
-        filter: sepia(0.2) hue-rotate(30deg) drop-shadow(2px 2px 6px rgba($black, 0.6));
         &:hover {
             //animation-name: logoanimate;
             //animation-duration: ;
             //animation-timing-function: linear;
             animation: logoanimate .2s backwards;
+            box-shadow: 2px 2px 0px $color-secondary-dark;
         }
+        &:active,
+        &:focus {
+            //animation-name: logoanimate;
+            //animation-duration: ;
+            //animation-timing-function: linear;
+            animation: logoanimate .2s backwards;
+            box-shadow: none;
+        }
+        filter: sepia(0) hue-rotate(30deg) drop-shadow(2px 2px 6px rgba($black, 0.8));
+        -webkit-filter: sepia(0) hue-rotate(30deg) drop-shadow(2px 2px 6px rgba($black, 0.8));
     }
     //svg{
     //

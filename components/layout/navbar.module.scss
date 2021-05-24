@@ -3,7 +3,7 @@
     width: 99.1vw;
     //height: 8vh;
     //flex-basis: 0 0 1;
-    background: linear-gradient(to right, $blue-jeans, $turquoise 20% 40%, $aquamarine 45% 80%);
+    background: linear-gradient(to left, $color-tertiary-dark, $color-tertiary, $color-tertiary-dark);
     padding: 2rem 0.8rem;
     display: flex;
     flex-direction: row;
@@ -42,21 +42,27 @@
     flex-wrap: wrap;
     margin: 0 1.2rem;
     gap: 1rem;
+
     a {
         // width: 100%;
         margin: 0 auto;
         font-size: 1.2rem;
-        padding: 0.2rem 0.4rem;
+        padding: 0.4rem 0.6rem;
         border-radius: 6px;
         transition: all .4s ease-in;
         outline: none;
         border: none;
         box-shadow: inset 1px 2px 3px $black;
         cursor: pointer;
+        color: $white;
+        //padding: 0.4rem;
+        background: $french-violet;
         &:hover {
-            background-color: $turquoise;
+            background-color: $aquamarine;
             opacity: 1;
             box-shadow: 2px 2px 4px $black;
+            color: $black;
+
         }
         // @include respond(large) {
         //     width: 200px;
@@ -65,13 +71,17 @@
         //     width: 200px;
         // }
         &:active {
-            background-color: $mikado-yellow;
+            background-color: $color-tertiary-light;
+            color: $black;
+            //background-color: $jazzberry-jam;
             filter: hue-rotate(45deg);
         }
         &:focus {
-            background: $slate-blue;
-            color: $navbar-green;
+            //background-color: $jazzberry-jam;
+            //color: $white;
+            background-color: $color-tertiary-light;
             filter: brightness(1);
+            color: $black;
         }
         &:visited {
             box-shadow: inset 2px 2px 8px $black;
