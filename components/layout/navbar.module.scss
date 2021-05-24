@@ -1,10 +1,10 @@
 @import "../../styles/variables";
 .header {
-    width: 100vw;
+    width: 99.1vw;
     //height: 8vh;
     //flex-basis: 0 0 1;
     background: linear-gradient(to right, $blue-jeans, $turquoise 20% 40%, $aquamarine 45% 80%);
-    padding: 2rem 10%;
+    padding: 2rem 0.8rem;
     display: flex;
     flex-direction: row;
     align-items: center;

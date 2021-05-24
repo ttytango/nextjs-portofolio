@@ -72,7 +72,7 @@ function ProjectsPage(props) {
 
 	return (
 		<section className={styles.listSection}>
-			<h2>Projects</h2>
+			<h1>Projects</h1>
 			{/* <SearchByKeyword onSearch={keywordHandler} /> */}
 			<ProjectItem
 				projects={projects}

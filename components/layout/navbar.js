@@ -10,7 +10,7 @@ export default function Navbar() {
 			<nav>
 				<ul className={styles.topNavButtons}>
 					<li>
-						<Link href="/techstack">Skills and Tech Stack</Link>
+						<Link href="/techstack">Tools and Tech Stack</Link>
 					</li>
 					<li>
 						<Link href="/projects">Browse All Projects</Link>
