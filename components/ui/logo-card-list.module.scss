@@ -14,12 +14,10 @@
     flex-direction: column;
     width: 50%;
     margin: 1rem auto;
-
 }
 
 .list {
-            // background: radial-gradient(ellipse, $color-tertiary-light 80%, $color-tertiary-dark);
-
+    // background: radial-gradient(ellipse, $color-tertiary-light 80%, $color-tertiary-dark);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -27,4 +25,10 @@
     width: 60vw;
     height: 30vh;
     margin: 0.5rem auto;
+}
+
+.title {
+    h1 {
+        letter-spacing: 0.2rem;
+    }
 }

@@ -24,33 +24,37 @@ function ProjectDetailPage(props) {
 		<Fragment>
 			<Card id={project.id} key={project.id}>
 				<div className={styles.project}>
-					<h2>{project.title}</h2>
-					<p>{project.description}</p>
-					<div className={styles.buttonGroup}>
-						{project.isLive ? (
-							<a
-								target="_blank"
-								href={`${project.url}`}
-								rel="noopener noreferrer"
-								className={styles.linkButton}
-							>
-								View Live Project
-							</a>
-						) : null}
-						{project.isSourceCodePrivate ? null : project.sourceCode ? (
-							<a
-								target="_blank"
-								href={`${project.sourceCode}`}
-								rel="noopener noreferrer"
-								className={styles.linkButton}
-							>
-								View Code on Github
-							</a>
-						) : null}
+					<div className={styles.projectAllContent}>
+						<div className={styles.projectText}>
+							<h2>{project.title}</h2>
+							<p>{project.description}</p>
+						</div>
+						<div className={styles.buttonGroup}>
+							{project.isLive ? (
+								<a
+									target="_blank"
+									href={`${project.url}`}
+									rel="noopener noreferrer"
+									className={styles.linkButton}
+								>
+									View Live Project
+								</a>
+							) : null}
+							{project.isSourceCodePrivate ? null : project.sourceCode ? (
+								<a
+									target="_blank"
+									href={`${project.sourceCode}`}
+									rel="noopener noreferrer"
+									className={styles.linkButton}
+								>
+									View Code on Github
+								</a>
+							) : null}
 
-						<Link href={`/projects`}>
-							<a className={styles.backButton}>Back to Projects</a>
-						</Link>
+							<Link href={`/projects`}>
+								<a className={styles.backButton}>Back to Projects</a>
+							</Link>
+						</div>
 					</div>
 				</div>
 			</Card>

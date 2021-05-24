@@ -87,7 +87,7 @@ const skills = [
 export default function LogoCardList() {
 	return (
 		<>
-			<h1>Frequently Used Tools</h1>
+			<h1 className={styles.title}>Frequently Used Tools</h1>
 			{/*<div className={styles.cardList}>*/}
 			<div className={styles.list}>
 				{skills.map((skill) => {

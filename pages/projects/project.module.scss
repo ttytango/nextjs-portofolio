@@ -1,7 +1,7 @@
 @import "../../styles/variables";
 .project {
     text-align: center;
-    background: $color-tertiary;
+    background: $color-tertiary-light;
     padding: 1.2rem 1.4rem;
     box-shadow: $default-box-shadow;
     min-height: 60vh;
@@ -52,10 +52,32 @@
     min-height: 30vh;
     gap: 2rem;
     background: rgba($color-primary-light, 0.4);
-    border-radius: $default-card-border-radius*2;
+    // border-radius: $default-card-border-radius*2;
     padding: 1rem 0;
+    border-bottom-right-radius: $default-card-border-radius*4;
+    border-bottom-left-radius: $default-card-border-radius*4;
 }
 
 .project h2 {
     font-size: 1.6rem;
+    color: $white;
+}
+
+.projectText {
+    background: $black;
+    color: $white;
+    border-top-left-radius: $default-card-border-radius*4;
+    border-top-right-radius: $default-card-border-radius*4;
+    padding: 2rem 0.4rem;
+    margin: 0 auto;
+    letter-spacing: .1rem;
+}
+
+.projectAllContent {
+    box-shadow: 2px 2px 10px $black;
+    border-radius: $default-card-border-radius*4;
+    -webkit-border-radius: $default-card-border-radius*4;
+    -moz-border-radius: $default-card-border-radius*4;
+    -ms-border-radius: $default-card-border-radius*4;
+    -o-border-radius: $default-card-border-radius*4;
 }
