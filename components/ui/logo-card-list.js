@@ -77,11 +77,17 @@ const skills = [
 		icon: "/images/cof_orange_hex.svg",
 		description: "Linux!",
 	},
+	{
+		id: "12",
+		name: "NextJS",
+		icon: "/images/vercel-edited.svg",
+		description: "I love using using NextJS, It's Fab!!!",
+	},
 ];
 export default function LogoCardList() {
 	return (
 		<>
-			<h1>Tech Stack</h1>
+			<h1>Killa Stack</h1>
 			{/*<div className={styles.cardList}>*/}
 			<div className={styles.list}>
 				{skills.map((skill) => {

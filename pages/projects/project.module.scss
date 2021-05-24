@@ -10,10 +10,13 @@
         border-style: none;
     }
     .backButton {
-        background: rgb(235, 92, 92);
+        background: #ff174f;
         &:hover {
-            background: rgba(25, 255, 255, 0.5);
-            //border: 1px solid #79f5da;
+            background: #c00730;
+        }
+        &:active {
+            background: rgba(255, 0, 10, 0.5);
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
         }
     }
     .linkButton {
@@ -23,21 +26,21 @@
             // background: #79f5da;
             //border: 1px solid #79f5da;
         }
+        &:active {
+            background: #27d6c8;
+            //border: 27d6c8;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+        }
     }
     .linkButton,
     .backButton {
         width: 40%;
         padding: 0.4rem 1rem;
         box-shadow: $default-box-shadow;
-        border-radius: $default-card-border-radius*2;
+        border-radius: $default-card-border-radius*4;
         display: flex;
         justify-content: center;
         gap: 2rem;
-        &:active {
-            background: #27d6c8;
-            //border: 27d6c8;
-            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-        }
     }
 }
 

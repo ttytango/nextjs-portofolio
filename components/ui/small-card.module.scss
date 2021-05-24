@@ -1,6 +1,5 @@
 @import "../../styles/variables";
 @import "../../styles/animations";
-
 .smallLogoCard {
     position: relative;
     min-height: 10vh;
@@ -21,15 +20,12 @@
     font-size: 1.2rem;
     outline: none;
     transition: all 1s ease-out;
-
-
     //border: none;
     .logo {
         z-indez: -200;
         background: radial-gradient(to bottom right, rgba($slate-blue, 0.4) 2% 5%, $dodger-blue 30% 50%);
         drop-shadow: 2px 2px 5px $black;
         transition: all 1s ease-out;
-
         &:hover {
             animation-name: logoanimate;
             animation-duration: .8s;
@@ -37,17 +33,16 @@
         &:active {
             filter: drop-shadow(0px 0px 0px);
         }
-
         //filter: sepia(0.2) hue-rotate(30deg) drop-shadow(-2px 1px 4px rgba($black, 0.6));
-
     }
-    img,svg {
-        //position: sticky;
+    img,
+    svg {
+        position: sticky;
         image-orientation: flex;
         object-fit: contain;
         padding: 1rem 2rem;
         margin: 1rem 2rem;
-        box-shadow: 2px 2px 0px rgba(78, 78, 52, 0.63); // size:
+        box-shadow: 2px 2px 0px rgba(78, 78, 52, 0.63);
         overflow: hidden;
         filter: sepia(0.2) hue-rotate(30deg) drop-shadow(2px 2px 6px rgba($black, 0.6));
         &:hover {

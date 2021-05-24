@@ -1,5 +1,6 @@
 // import { useEffect, usseState } from "react";
 // import { useRouter } from "next/router";
+import Image from "next/image";
 import Link from "next/link";
 // import { useRouter } from "next/router";
 // import useSWR from "swr";
@@ -92,7 +93,14 @@ function ProjectsPage(props) {
 										})}
 									</ul>
 								</div>
-								<div className={styles.imageContainer}>Hello</div>
+								<div className={styles.imageContainer}>
+									<Image
+										src={"/" + project.image}
+										alt={project.title}
+										width={820}
+										height={450}
+									/>
+								</div>
 							</span>
 
 							<Link href={`/projects/${encodeURIComponent(project.id)}`}>

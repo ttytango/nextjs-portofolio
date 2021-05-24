@@ -4,7 +4,8 @@
     width: 90%;
     margin: 1rem auto;
     box-shadow: $default-box-shadow;
-    .submitFormButton {
+    border-radius: $default-card-border-radius*4;
+    .submitFormButton: {
         padding: 1rem 0;
     }
 }
@@ -15,7 +16,7 @@
     flex-wrap: nowrap;
     width: 70vw;
     margin: 0.5rem auto;
-    padding: 1rem;
+    padding: 2rem;
     // justify-content: space-between;
     // align-content: space-around;
     // gap: 1rem;
@@ -38,6 +39,8 @@
         filter: opacity(.8);
         -webkit-filter: opacity(.8);
         transition: all .2s linear;
+        border-radius: $default-card-border-radius*4;
+        outline: none;
         &:focus {
             filter: opacity(1);
             -webkit-filter: opacity(1);

@@ -37,7 +37,7 @@ function ProjectDetailPage(props) {
 								View Live Project
 							</a>
 						) : null}
-						{project.sourceCode ? (
+						{project.isSourceCodePrivate ? null : project.sourceCode ? (
 							<a
 								target="_blank"
 								href={`${project.sourceCode}`}
@@ -47,6 +47,7 @@ function ProjectDetailPage(props) {
 								View Code on Github
 							</a>
 						) : null}
+
 						<Link href={`/projects`}>
 							<a className={styles.backButton}>Back to Projects</a>
 						</Link>

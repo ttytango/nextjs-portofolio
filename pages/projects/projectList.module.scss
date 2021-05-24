@@ -1,6 +1,6 @@
 @import "../../styles/variables";
 .listSection {
-    width: 80%;
+    width: 90%;
     margin: 2rem auto;
     text-align: center;
     padding: 1.2rem 1.4rem;
@@ -22,10 +22,10 @@
     li {
         margin: 1rem auto;
         background: $blue-jeans;
-        filter: hue-rotate(45deg);
-        width: 80%;
+        background: lighten($mikado-yellow, 20%);
+        width: 90%;
         padding: 1rem;
-        border-radius: $default-card-border-radius;
+        border-radius: $default-card-border-radius*3;
         box-shadow: $default-box-shadow;
         //margin: 0 auto;
         //background: $aquamarine;
@@ -37,7 +37,11 @@
         //filter: brightness(0.5);
         //-webkit-filter: brightness(0.5);
         //:;
-        -webkit-filter: hue-rotate(45deg);
+        //-webkit-filter: hue-rotate(45deg);
+        //-webkit-border-radius: $default-card-border-radius*3;
+        //-moz-border-radius: $default-card-border-radius*3;
+        //-ms-border-radius: $default-card-border-radius*3;
+        //-o-border-radius: $default-card-border-radius*3;
     }
 }
 
@@ -45,26 +49,52 @@
 //     width: 80%;
 // }
 .toolsContainer {
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: column-reverse;
     margin: 0 auto;
     @media (min-width: 900px) {
         flex-direction: row;
     }
+    li {
+        background: $black;
+        color: $white;
+    }
 }
 
 .imageContainer {
     margin: 1rem auto;
     color: $white;
-    background: $black;
+    // background: linear-gradient(to top, rgba($black, 0.5) 10%, rgba($black, 0.1), rgba($blue-jeans, 0) 50%);
     display: flex;
     align-self: center;
-    justify-content: center;
+    justify-content: space-around;
+    justify-items: center;
     align-items: center;
-    @media (min-width: 768px) {
-        width: 300px;
+    border-radius: 25%;
+    // box-shadow: inset 2px 12px 10px 12px $black;
+    transition: all .3s ease-in;
+    object-fit: contain;
+    z-index: 1;
+    @media(min-width: 768px) {
+        width: 480px;
         height: 300px;
+    }
+    &:hover {
+        box-shadow: none;
+        // background: linear-gradient(to top, rgba($black, 0.5) 10%, rgba($black, 0.1), rgba($blue-jeans, 0) 50%);
+    }
+}
+
+.imageContainer>* {
+    box-shadow: 2px 2px 3px $black;
+    width: 80%;
+    height: 60%;
+    transition: all .3s ease-in;
+    &:hover {
+        width: 100%;
+        height: 100%;
+        transform: scaleX(1.2);
     }
 }
 
@@ -79,6 +109,7 @@
     text-align: center;
     //color: rgb(19, 30, 65);
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
 }
 
 .button:hover {
