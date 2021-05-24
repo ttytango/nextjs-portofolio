@@ -16,6 +16,9 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    align-items: center;
+    justify-items: center;
+    // justify-content: center;
     // width: 70vw;
     margin: 0.5rem auto;
     // padding: 2rem;
@@ -25,17 +28,20 @@
     // align-items: flex-start;
     label,
     input {
-        align-items: flex-start;
-        padding: 0 1rem;
+        align-self: center;
+        justify-self: center;
+        padding: 1rem 1rem;
         //margin: 0.8rem auto;
         min-width: 40%;
-        max-width: 80%;
-        height: 4vh;
+        max-width: 90%;
+        // height: 6vh;
         margin: 2rem auto;
     }
     label {
-        align-self: center;
+        // align-items: center;
+        // justify-self: center;
         font-size: 1.4rem;
+        // height: 6vh;
         letter-spacing: 0.1rem;
     }
     input,
@@ -61,7 +67,8 @@
         padding: 0.5rem 1rem;
         margin: 1.2rem auto;
     }
-    @media(max-width: 768px) {
-        height: 40vh;
+    @media(min-width: 768px) {
+        height: 20vh;
+        flex-direction: row;
     }
 }

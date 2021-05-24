@@ -3,6 +3,7 @@
 // import Image from "next/image";
 // import { useRouter } from "next/router";
 import { Fragment } from "react";
+import Head from "next/head";
 import Link from "next/link";
 import { getProjectById, getAllProjects } from "../../helpers/api-utils";
 import styles from "./project.module.scss";
@@ -22,6 +23,10 @@ function ProjectDetailPage(props) {
 
 	return (
 		<Fragment>
+			<Head>
+				<title>{project.title}</title>
+				<meta name="description" content={project.description} />
+			</Head>
 			<Card id={project.id} key={project.id}>
 				<div className={styles.project}>
 					<div className={styles.projectAllContent}>

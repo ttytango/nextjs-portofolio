@@ -1,5 +1,7 @@
 // import { useEffect, usseState } from "react";
 // import { useRouter } from "next/router";
+import { Fragment } from "react";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 // import { useRouter } from "next/router";
@@ -71,52 +73,58 @@ function ProjectsPage(props) {
 	// }
 
 	return (
-		<section className={styles.listSection}>
-			<h1>Projects</h1>
-			{/* <SearchByKeyword onSearch={keywordHandler} /> */}
-			<ProjectItem
-				projects={projects}
-				callbackfn={(project) => {
-					return (
-						<li
-							id={project.id}
-							key={project.id}
-							className={styles.projectListItem}
-						>
-							<div className={styles.projectTitle}>
-								<h2>{project.title}</h2>
-							</div>
-							<span className={styles.toolsContainer}>
-								<div>
-									<h4>Principle Tools Used:</h4>
-									<ul>
-										{project.tags.map((data, key, tag) => {
-											return (
-												<li id={key} key={tag.id}>
-													{tag[key]}
-												</li>
-											);
-										})}
-									</ul>
+		<Fragment>
+			<Head>
+				<title>TJ Simonson | Projects</title>
+				<meta name="description" content="Featured Projects Page" />
+			</Head>
+			<section className={styles.listSection}>
+				<h1>Projects</h1>
+				{/* <SearchByKeyword onSearch={keywordHandler} /> */}
+				<ProjectItem
+					projects={projects}
+					callbackfn={(project) => {
+						return (
+							<li
+								id={project.id}
+								key={project.id}
+								className={styles.projectListItem}
+							>
+								<div className={styles.projectTitle}>
+									<h2>{project.title}</h2>
 								</div>
-								<div className={styles.imageContainer}>
-									<Image
-										src={"/" + project.image}
-										alt={project.title}
-										width={820}
-										height={450}
-									/>
-								</div>
-							</span>
+								<span className={styles.toolsContainer}>
+									<div>
+										<h4>Principle Tools Used:</h4>
+										<ul>
+											{project.tags.map((data, key, tag) => {
+												return (
+													<li id={key} key={tag.id}>
+														{tag[key]}
+													</li>
+												);
+											})}
+										</ul>
+									</div>
+									<div className={styles.imageContainer}>
+										<Image
+											src={"/" + project.image}
+											alt={project.title}
+											width={820}
+											height={450}
+										/>
+									</div>
+								</span>
 
-							<Link href={`/projects/${encodeURIComponent(project.id)}`}>
-								<button className={styles.button}>View Project</button>
-							</Link>
-						</li>
-					);
-				}}
-			/>
-		</section>
+								<Link href={`/projects/${encodeURIComponent(project.id)}`}>
+									<button className={styles.button}>View Project</button>
+								</Link>
+							</li>
+						);
+					}}
+				/>
+			</section>
+		</Fragment>
 	);
 }
 

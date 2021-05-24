@@ -1,15 +1,21 @@
-// import Head from "next/head";
+import Head from "next/head";
 // import Image from "next/image";
 // import styles from "../styles/Home.module.css";
-// import StringCapitaliseForm from "../components/string-formatter/string-format-form";
 import AboutMe from "../components/home/about-me";
 
 export default function Home() {
 	return (
-		<div className="center">
-			{/* <h1>Home</h1> */}
-			<AboutMe />
-			{/* <StringCapitaliseForm /> */}
+		<div>
+			<Head>
+				<title>TJ Simonson | Portfolio</title>
+				<meta
+					name="description"
+					content="Timothy Simonson's Web Design Portfolio Site"
+				/>
+			</Head>
+			<div className="center">
+				<AboutMe />
+			</div>
 		</div>
 		// <div className={styles.container}>
 		//   <Head>

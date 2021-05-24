@@ -31,6 +31,7 @@ function ContactForm() {
 					required
 				/>
 			</div>
+			<hr />
 			<div className={styles.control}>
 				<label htmlFor="email">Email Address: </label>
 				<input
@@ -41,6 +42,8 @@ function ContactForm() {
 					required
 				/>
 			</div>
+			<hr />
+
 			<div className={styles.control}>
 				{/* <label htmlFor="description"></label> */}
 				<textarea
