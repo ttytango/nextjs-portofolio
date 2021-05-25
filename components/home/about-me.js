@@ -17,11 +17,12 @@ function AboutMe() {
 					a deeper plunge into web development.
 				</p>
 				<p>
-					<p>
+
 						My immediate goals are to boost my knowledge of modern Frontend Web
 						Development to enter into the tech industry, and build upon
 						knowledge of what I already know.
 					</p>
+				<p>
 					Prior to starting the bootcamp at _Nology in order to attain these
 					goals in early October 2020, I had already taught myself a great deal
 					of Python, eventually teaching myself the Django framework and Django
