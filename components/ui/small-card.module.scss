@@ -20,19 +20,29 @@
     font-weight: bold;
     font-size: 1.2rem;
     outline: none;
-    transition: all 1s ease-out;
+    transition: all 1s ease-in one-shot;
     //border: none;
     .logo {
         z-indez: -200;
-        background: radial-gradient(to bottom right, $color-four-light 80%, rgba($color-four, 0.6) 2% 5%);
+        background: radial-gradient(to bottom right, rgba($color-tertiary-light, 0.6) 80%, rgba($color-four, 0.4) 2% 5%);
         drop-shadow: 2px 2px 5px $black;
-        transition: all 1s ease-out;
-        &:hover {
+        transition: all .6s ease-out;
+        &:hover, &:visited, &:after {
             animation-name: logoanimate;
             animation-duration: .8s;
+            filter: opacity(1);
+            transform: scaleX(-1.2) scaleY(-0.8);
         }
+
+        &:hover, &:visited, &:after {
+            transition-delay: .6s;
+            animation-delay-timing-function: .3s;
+        }
+
         &:active {
+            transition: all .1s ease-out;
             filter: drop-shadow(0px 0px 0px);
+            transform: scaleX(1.2) scaleY(0.8);
         }
         //filter: sepia(0.2) hue-rotate(30deg) drop-shadow(-2px 1px 4px rgba($black, 0.6));
     }
