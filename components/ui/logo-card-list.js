@@ -86,7 +86,7 @@ const skills = [
 ];
 export default function LogoCardList() {
 	return (
-		<>
+		<section className={styles.cardList}>
 			<h1 className={styles.title}>Frequently Used Tools</h1>
 			{/*<div className={styles.cardList}>*/}
 			<div className={styles.list}>
@@ -103,6 +103,6 @@ export default function LogoCardList() {
 				})}
 			</div>
 			{/*</div>*/}
-		</>
+		</section>
 	);
 }

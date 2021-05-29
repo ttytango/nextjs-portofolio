@@ -1,13 +1,20 @@
 @keyframes logoanimate {
   0% {
     filter: hue-rotate(0deg);
+    backdrop-filter: drop-shadow(4px 4px 12px white);
+    outline: 1px solid white;
+
   }
   35% {
-    filter: hue-rotate(-45deg);
+    filter: hue-rotate(45deg);
+    backdrop-filter: drop-shadow(4px 4px 12px white);
+    outline: none;
+
   }
   40% {
     // border-radius: 32px;
-    filter: hue-rotate(-90deg) opacity(0.8);
+    filter: hue-rotate(90deg) opacity(0.8);
+    backdrop-filter: drop-shadow(4px 4px 12px white);
   }
   45% {
     //border-radius: 20px;
@@ -17,12 +24,19 @@
   50% {
     // border-radius: 32px;
     filter: hue-rotate(-90deg) opacity(0.8);
+    backdrop-filter: drop-shadow(4px 4px 12px white);
+
   }
   65% {
     filter: hue-rotate(-45deg);
+    backdrop-filter: drop-shadow(4px 4px 12px white);
+
+
   }
   80% {
     filter: hue-rotate(-20deg);
+    outline: 1px solid white;
+
   }
 
 }

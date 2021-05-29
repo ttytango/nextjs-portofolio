@@ -1,13 +1,17 @@
 import { useRef } from "react";
 import styles from "./contact-form.module.scss";
 import Button from "../ui/button";
+import {sendForm} from "../../pages/api/contact-me";
 
-function ContactForm() {
+function ContactForm(props) {
+	const sendContactForm = props;
 	const nameInputRef = useRef();
 	const emailInputRef = useRef();
 	const descriptionInputRef = useRef();
-
-	function submitMessageHandler(event) {
+	function onChange(event) {
+		event.preventDefault();
+	}
+	function onSubmit(event) {
 		event.preventDefault();
 		const nameInput = nameInputRef.current.value;
 		const emailInput = emailInputRef.current.value;
@@ -16,11 +20,13 @@ function ContactForm() {
 			name: nameInput,
 			email: emailInput,
 			description: descriptionInput,
-		};
-		console.log(message);
+		}
+		sendContactForm(message);
 	}
+		// console.log(message);
+
 	return (
-		<form className={styles.contactForm} onSubmit={submitMessageHandler}>
+		<form className={styles.contactForm}/* onSubmit={sendForm}*/ onChange={onChange}>
 			<div className={styles.control}>
 				<label htmlFor="name">Name: </label>
 				<input
@@ -45,7 +51,7 @@ function ContactForm() {
 			<hr />
 
 			<div className={styles.control}>
-				{/* <label htmlFor="description"></label> */}
+				 <label htmlFor="description">Enquiry:</label>
 				<textarea
 					rows="5"
 					cols="80"
@@ -55,7 +61,7 @@ function ContactForm() {
 				/>
 			</div>
 			<div className={styles.submitFormButton}>
-				<Button>Submit</Button>
+				<Button onSubmit={sendContactForm}>Submit</Button>
 			</div>
 		</form>
 	);

@@ -3,8 +3,33 @@ import Head from "next/head";
 import styles from "./contact-me.module.scss";
 // import Button from "../../components/ui/button";
 import ContactForm from "../../components/contact-me/contact-form";
+// import sendForm from "../api/contact-me";
 
 export default function ContactPage() {
+	// const {sendForm} = props;
+	async function sendForm (req, res) {
+
+		const result = await fetch('/api/contact-me', {
+			body: JSON.stringify(
+				{
+					message: {
+						name: name,
+						email: email,
+						description: description,
+					}
+				}),
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			method: 'POST'
+		})
+
+			.then((res) = res.json())
+			.then((data) => {console.log(data)});
+		// result.user => 'Ada Lovelace'
+		console.log(result);
+	}
+	// sendForm();
 	// const nameInputRef = useRef();
 	// const emailInputRef = useRef();
 	// const descriptionInputRef = useRef();
@@ -16,7 +41,7 @@ export default function ContactPage() {
 			</Head>
 			<section className={styles.contact}>
 				<h1>Contact Me</h1>
-				<ContactForm />
+				<ContactForm submitMessageHandler={sendForm} />
 				{/*<Modal>Hello</Modal>*/}
 				{/* <form>
 				<div className={styles.control}>

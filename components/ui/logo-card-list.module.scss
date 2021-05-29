@@ -1,34 +1,71 @@
 @import "../../styles/variables";
-//.cardList {
-//    // align-content: flex-start;
-//    direction: row;
-//    //width: 10%;
-//    gap: 3rem;
-//    width: 80vw;
-//    // text-align: center;
-//    margin: 1rem 0;
-//}
-//
-.main {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: 1rem auto;
+.cardList {
+    //display: grid;
+    // align-content: flex-start;
+    ////direction: row;
+    //grid-template-rows: minmax(3fr, max-content);
+    //grid-template-columns: repeat(auto-fill, 150px auto-fill(4, auto-align));
+    //grid-template-areas: 200px auto-fill(2fr);
+    //object-fit: contain;
+    //margin: 1rem;
+    ////columns: 4rem;
+    //rows: 4rem;
+    //grid-start: auto;
+    //flex-grow: 4;
+    //width: 100%;
+    //width: 10%;
+    //gap: 3rem;
+    //width: 80vw;
+    // text-align: center;
+    //margin: 1rem 0;
 }
+//
+//.main {
+//    display: subgrid;
+//    //align-content: flex-start;
+//    direction: row;
+//    grid-template-rows: minmax(3fr, max-content);
+//    grid-template-columns: repeat(auto-fill, 200px auto-fill(2fr, 20px));
+//    //grid-template-areas: 200px auto-fill(2fr);
+//    //object-fit: contain;
+//    //margin: 4rem 0;
+//    //columns: 4rem;
+//    //rows: 4rem;
+//    gap: 2rem;
+//    grid-start: auto;
+//    flex-grow: 4;
+//    //display: flex;
+//    //flex-direction: column;
+//    //width: 80vw;
+//    //margin: 1rem auto;
+//}
 
 .list {
     // background: radial-gradient(ellipse, $color-tertiary-light 80%, $color-tertiary-dark);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 2rem;
-    width: 60vw;
-    height: 30vh;
-    margin: 0.5rem auto;
+    gap: 1rem;
+    padding: 2rem 2rem;
+    //width: 80vw;
+    min-height: 40vh;
+    max-height: 800vh;
+    //width: 60vw;
+    align-content: center;
+    justify-content: center;
+    //margin: 2rem auto;
+    overflow: hidden;
+
 }
+
+//.list {
+//    //grid-template-columns:  autofit(30px, repeat(3fr, 2));
+//    //gap: 2rem;
+//    //grid-template-columns: minmax(3fr, max-content)
+//}
 
 .title {
     h1 {
-        letter-spacing: 0.2rem;
+
     }
 }
