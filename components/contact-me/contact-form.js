@@ -51,7 +51,7 @@ function ContactForm(props) {
 			<hr />
 
 			<div className={styles.control}>
-				 <label htmlFor="description">Enquiry:</label>
+				 <label htmlFor="description" className={styles.descriptionLabel}>Enquiry:</label>
 				<textarea
 					rows="5"
 					cols="80"

@@ -1,26 +1,52 @@
 @import "../../styles/variables";
 .contactForm {
+    padding: 1rem;
     // background: linear-gradient(to top, $black 14%, rgba($color-primary-dark, .7) 14% 70%, $color-primary-dark 40%);
-    background: linear-gradient(to top, $black 10%, $color-four-dark 11% 40%);
+    background: linear-gradient(to top, $black 14%, $color-four-dark 15% 40%);
     color: $white;
     width: 90%;
     margin: 1rem auto;
     box-shadow: $default-box-shadow;
-    border-radius: $default-card-border-radius*4;
-    .submitFormButton: {
-        padding: 1rem 0;
+    border-radius: $default-card-border-radius*8;
+    .contactForm>*{
+        overflow: hidden;
     }
+    .submitFormButton {
+        padding: 0.4rem 0;
+        border-radius: $default-card-border-radius*2;
+    }
+    min-height: 40vh;
+    max-height: 140vh;
+
 }
 
 .control {
+    background: $french-violet;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
     justify-items: center;
-    // justify-content: center;
-    // width: 70vw;
-    margin: 0.5rem auto;
+    border: 1px solid $white;
+    filter: opacity(0.9) saturate(.64);
+    border-top-left-radius: $default-card-border-radius*4;
+    border-top-right-radius: $default-card-border-radius*4;
+    border-bottom-left-radius: $default-card-border-radius*4;
+    border-bottom-right-radius: $default-card-border-radius*4;
+    padding: 1rem 1rem;
+     //justify-content: center;
+     width: 60vw;
+    min-height: 14vh;
+    max-height: 40vh;
+    margin: 0.6rem auto;
+    overflow: scrollbar;
+    box-shadow: 4px 4px 4px 6px rgba(60, 40, 160, 0.8);
+
+    @media(min-width: 768px) {
+        padding: 0 1rem;
+        border: none;
+    }
+
     // padding: 2rem;
     // justify-content: space-between;
     // align-content: space-around;
@@ -29,13 +55,12 @@
     label,
     input {
         align-self: center;
-        justify-self: center;
+        justify-self: flex-start;
         padding: 1rem 1rem;
         //margin: 0.8rem auto;
         min-width: 40%;
         max-width: 90%;
-        // height: 6vh;
-        margin: 2rem auto;
+        margin: 0.2rem auto;
     }
     label {
         // align-items: center;
@@ -48,8 +73,8 @@
     textarea {
         font-family: Lato, sans-serif;
         font-size: 1.1rem;
-        filter: opacity(.8);
-        -webkit-filter: opacity(.8);
+        filter: opacity(.6);
+        -webkit-filter: opacity(.6);
         transition: all .2s linear;
         border-radius: $default-card-border-radius*4;
         outline: none;
@@ -66,9 +91,24 @@
         width: 80%;
         padding: 0.5rem 1rem;
         margin: 1.2rem auto;
+
+
+    }
+    @media(max-width: 480px){
+        input,
+        textarea {
+            font-size: 0.8rem;
+        }
     }
     @media(min-width: 768px) {
-        height: 20vh;
+        height: 10vh;
         flex-direction: row;
+        font-size: 0.4rem;
+        .contactForm>*{
+            overflow: hidden;
+
+        }
     }
+
 }
+
