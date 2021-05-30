@@ -31,6 +31,11 @@
     &:hover {
         color: $white;
     }
+    @media(min-width: 768px) {
+        font-size: 1.6rem;
+        padding: 0.8rem 1rem;
+        font-weight: 600;
+    }
 }
 
 .topNavButtons {
@@ -63,6 +68,11 @@
             box-shadow: 2px 2px 4px $black;
             color: $black;
 
+        }
+        @media(min-width: 768px) {
+            font-size: 1.4rem;
+            padding: 0.8rem 0.8rem;
+            font-weight: 600;
         }
         // @include respond(large) {
         //     width: 200px;

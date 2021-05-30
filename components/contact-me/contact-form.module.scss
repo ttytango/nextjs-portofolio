@@ -35,7 +35,7 @@
     border-bottom-right-radius: $default-card-border-radius*4;
     padding: 1rem 1rem;
      //justify-content: center;
-     width: 60vw;
+    width: 60vw;
     min-height: 14vh;
     max-height: 40vh;
     margin: 0.6rem auto;
@@ -43,8 +43,13 @@
     box-shadow: 4px 4px 4px 6px rgba(60, 40, 160, 0.8);
 
     @media(min-width: 768px) {
-        padding: 0 1rem;
+        padding: 0 auto;
         border: none;
+        margin: auto;
+        label {
+            text-align: left;
+            justify-content: flex-start;
+        }
     }
 
     // padding: 2rem;
@@ -55,6 +60,7 @@
     label,
     input {
         align-self: center;
+        align-content: space-evenly;
         justify-self: flex-start;
         padding: 1rem 1rem;
         //margin: 0.8rem auto;
@@ -63,11 +69,15 @@
         margin: 0.2rem auto;
     }
     label {
-        // align-items: center;
-        // justify-self: center;
+         //align-items: center;
+         //justify-self: center;
         font-size: 1.4rem;
+        padding: 2rem 2rem;
+        width: 20vw;
         // height: 6vh;
         letter-spacing: 0.1rem;
+        text-align: left;
+        margin-left: 0;
     }
     input,
     textarea {
@@ -90,14 +100,18 @@
     textarea {
         width: 80%;
         padding: 0.5rem 1rem;
-        margin: 1.2rem auto;
+        margin: 1.2rem 0;
 
 
     }
-    @media(max-width: 480px){
+    @media(max-width: 767px){
         input,
         textarea {
             font-size: 0.8rem;
+        }
+        label {
+            font-size: 1.4rem;
+            font-weight: 600;
         }
     }
     @media(min-width: 768px) {
@@ -110,5 +124,18 @@
         }
     }
 
+}
+.descriptionLabel{
+    font-size: 1.4rem;
+    padding: 2rem 2rem;
+    width: 20vw;
+    // height: 6vh;
+    letter-spacing: 0.1rem;
+    @media(min-width: 768px) {
+        font-size: 1.4rem;
+        margin: 2rem 4rem;
+        width: 30vw;
+        //margin: 0 auto;
+    }
 }
 
