@@ -74,12 +74,16 @@
             padding: 0.8rem 0.8rem;
             font-weight: 600;
         }
-        // @include respond(large) {
-        //     width: 200px;
-        // }
-        // @include respond(medium) {
-        //     width: 200px;
-        // }
+        @media(max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+            font-size: 1rem;
+            margin: 1rem auto;
+            padding: 0.4rem 0.2rem;
+            font-weight: 600;
+            align-content: space-around;
+            //gap: 2rem;
+        }
         &:active {
             background-color: $color-tertiary-light;
             color: $black;
