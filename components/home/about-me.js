@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import styles from "./about-me.module.scss";
+
 function AboutMe() {
 	return (
 		<section className={styles.homeContent}>
