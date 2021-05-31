@@ -1,5 +1,6 @@
     @import "../../styles/variables";
     .listSection {
+        font-family: $font-family-sans;
         width: 90%;
         margin: 2rem auto;
         text-align: center;
@@ -14,7 +15,7 @@
             letter-spacing: 0.4rem;
         }
     }
-
+    
     .projectList {
         display: flex;
         flex-direction: column;
@@ -47,7 +48,7 @@
             flex-wrap: wrap;
         }
     }
-
+    
     .toolsContainer {
         //width: 90%;
         display: flex;
@@ -74,7 +75,7 @@
             // background: rgba($black, 0.6);
         }
     }
-
+    
     .imageContainer {
         margin: 1rem auto;
         color: $white;
@@ -98,7 +99,7 @@
             // background: linear-gradient(to top, rgba($black, 0.5) 10%, rgba($black, 0.1), rgba($blue-jeans, 0) 50%);
         }
     }
-
+    
     .imageContainer>* {
         box-shadow: 2px 2px 3px $black;
         width: 80%;
@@ -111,7 +112,7 @@
             transform: scaleX(1.2);
         }
     }
-
+    
     .button {
         cursor: pointer;
         background: #27d6b0;
@@ -126,12 +127,12 @@
         box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
         border-radius: 25px;
     }
-
+    
     .button:hover {
         background: #79f5da;
         border: 1px solid #79f5da;
     }
-
+    
     .button:active {
         background: #27d6c8;
         border: 1px solid #27d6c8;

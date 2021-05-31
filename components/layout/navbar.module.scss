@@ -1,6 +1,7 @@
 @import "../../styles/variables";
 .header {
-    width: 99.1vw;
+    font-family: $font-family-oswald;
+    width: 99vw;
     //height: 8vh;
     //flex-basis: 0 0 1;
     background: linear-gradient(to left, $color-tertiary-dark, $color-tertiary, $color-tertiary-dark);
@@ -23,7 +24,7 @@
 }
 
 .brand {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     width: 10%;
     margin: 1.2rem 2rem;
     cursor: pointer;
@@ -32,13 +33,13 @@
         color: $white;
     }
     @media(min-width: 768px) {
-        font-size: 1.6rem;
         padding: 0.8rem 1rem;
         font-weight: 600;
     }
 }
 
 .topNavButtons {
+    font-family: $font-family-funky;
     width: 90%;
     // min-width: 200px;
     display: flex;
@@ -47,7 +48,6 @@
     flex-wrap: wrap;
     margin: 0 1.2rem;
     gap: 1rem;
-
     a {
         // width: 100%;
         margin: 0 auto;
@@ -67,7 +67,6 @@
             opacity: 1;
             box-shadow: 2px 2px 4px $black;
             color: $black;
-
         }
         @media(min-width: 768px) {
             font-size: 1.4rem;
@@ -79,8 +78,9 @@
             flex-direction: column;
             font-size: 1rem;
             margin: 1rem auto;
-            padding: 0.4rem 0.2rem;
-            font-weight: 600;
+            padding: 0.5rem 0.4rem;
+            letter-spacing: .1rem;
+            font-weight: 500;
             align-content: space-around;
             //gap: 2rem;
         }

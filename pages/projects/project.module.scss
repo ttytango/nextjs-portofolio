@@ -45,13 +45,14 @@
 }
 
 .buttonGroup {
+    font-size: 1.6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 30vh;
     gap: 2rem;
-    background: rgba($color-primary, 0.6);
+    background: rgba($color-primary, 0.8);
     // border-radius: $default-card-border-radius*2;
     padding: 1rem 0;
     border-bottom-right-radius: $default-card-border-radius*4;
@@ -64,13 +65,16 @@
 }
 
 .projectText {
-    background: $black;
+    font-family: $font-family-sans;
+    font-weight: 500;
+    font-size: 1.6rem;
+    background: lighten($black, 10%);
     color: $white;
     border-top-left-radius: $default-card-border-radius*4;
     border-top-right-radius: $default-card-border-radius*4;
     padding: 2rem 0.4rem;
     margin: 0 auto;
-    letter-spacing: .06rem;
+    letter-spacing: .1rem;
     text-align: justify;
     h2 {
         text-align: center;
