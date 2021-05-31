@@ -3,6 +3,13 @@ import styles from "./contact-form.module.scss";
 import Button from "../ui/button";
 // import sendForm from "../../pages/api/contact-me";
 
+
+function emailValidate(string) {
+	const email = string;
+	const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+	return pattern.test(email);
+}
+
 function ContactForm() {
 
 	function sendForm(message) {
@@ -36,13 +43,20 @@ function ContactForm() {
 		const descriptionInput = descriptionInputRef.current.value;
 		const message = {
 			name: nameInput,
-			email: emailInput,
+			email: emailInput.trim(),
 			description: descriptionInput,
 		}
-		// console.log(message);
+		if (!emailValidate(message.email)) {
+			alert("Invalid Email");
+			return;
+		}
+		if (!message.description || !message.name) {
+			alert("Form incomplete");
+			return;
+		}
+
 		sendForm(message);
 	}
-		// console.log(message);
 
 	return (
 		<form className={styles.contactForm} onSubmit={submitMessageHandler} onChange={onChange}>
