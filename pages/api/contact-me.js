@@ -1,31 +1,20 @@
-export default function sendForm (req, res) {
+const handler = async (req, res) => {
+    let newMessage = { };
     if (req.method === 'POST') {
-        const newMessage = req.body.newMessage;
-        res.status(201).json({message: "success"})
-        console.log(newMessage);
+        const {name, email, description} = req.body.message;
+        newMessage = {
+            id: new Date().toISOString(),
+            name: name,
+            email: email,
+            description: description,
+        }
+        res.status(201).json({message: `success ${newMessage.name}, ID: ${newMessage.id}`});
     } else {
         res.status(400).json({message: "failed"})
     }
 }
-// export default function sendFormHandler () {
-    // event.preventDefault();
-// export async function sendForm (req, res) {
-//     const {name, email, description} = req.body;
-//
-//     const result = await fetch('/api/contact-me', {
-//     message: {
-//         name,
-//         email,
-//         description,
-//     },
-//     headers: {
-//             'Content-Type': 'application/json',
-//     method: 'POST',
-//     }}).then((res) = res.json()).then((data) => {console.log(data)});
-//     // result.user => 'Ada Lovelace'
-//     // console.log(data);
-//     console.log(result);
-//
-// }
-//     sendForm();
-// }
+export default handler;
+//         headers: {
+//         'Content-Type': 'application/json'},
+// method: 'POST',
+// }}).then((res) = res.json()).then((data) => {console.log(data)});
