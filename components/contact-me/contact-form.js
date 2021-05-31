@@ -3,7 +3,6 @@ import styles from "./contact-form.module.scss";
 import Button from "../ui/button";
 // import sendForm from "../../pages/api/contact-me";
 
-
 function emailValidate(string) {
 	const email = string;
 	const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -11,21 +10,19 @@ function emailValidate(string) {
 }
 
 function ContactForm() {
-
 	function sendForm(message) {
 		// event.preventDefault();
-		fetch('/api/contact-me', {
-			method: 'POST',
+		fetch("/api/contact-me", {
+			method: "POST",
 			headers: {
-				'Content-Type': 'application/json'
+				"Content-Type": "application/json",
 			},
-			body: JSON.stringify(
-				{message: message,
-				})
+			body: JSON.stringify({ message: message }),
 		})
-
 			.then((res) => res.json())
-			.then((data) => {console.log(data)});
+			.then((data) => {
+				console.log(data);
+			});
 		// result.user => 'Ada Lovelace'
 		// console.log(result);
 	}
@@ -45,7 +42,7 @@ function ContactForm() {
 			name: nameInput,
 			email: emailInput.trim(),
 			description: descriptionInput,
-		}
+		};
 		if (!emailValidate(message.email)) {
 			alert("Invalid Email");
 			return;
@@ -59,7 +56,11 @@ function ContactForm() {
 	}
 
 	return (
-		<form className={styles.contactForm} onSubmit={submitMessageHandler} onChange={onChange}>
+		<form
+			className={styles.contactForm}
+			onSubmit={submitMessageHandler}
+			onChange={onChange}
+		>
 			<div className={styles.control}>
 				<label htmlFor="name">Name: </label>
 				<input
@@ -84,7 +85,9 @@ function ContactForm() {
 			<hr />
 
 			<div className={styles.control}>
-				 <label htmlFor="description" className={styles.descriptionLabel}>Enquiry:</label>
+				<label htmlFor="description" className={styles.descriptionLabel}>
+					Enquiry:
+				</label>
 				<textarea
 					rows="5"
 					cols="80"
