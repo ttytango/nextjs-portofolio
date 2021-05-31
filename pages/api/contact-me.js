@@ -13,17 +13,19 @@ const handler = async(req, res) => {
             email: email,
             description: description
         }
-        const client = await MongoClient.connect(process.env.ATLAS_URI);
+        const client = await MongoClient.connect(process.env.ATLAS_URI, { useUnifiedTopology: true });
 
         const db = client.db();
         await db.collection('mail').insertOne({ mail: newMessage });
         // const userMessage = JSON.stringify(newMessage);
+        client.close();
         res.status(201).json({ message: "success" });
 
     } else {
+        client.close();
         res.status(400).json({ message: "failed" });
     }
-    client.close();
+
 }
 export default handler;
 //         headers: {
