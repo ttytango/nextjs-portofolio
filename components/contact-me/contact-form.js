@@ -1,17 +1,35 @@
 import { useRef } from "react";
 import styles from "./contact-form.module.scss";
 import Button from "../ui/button";
-import {sendForm} from "../../pages/api/contact-me";
+// import sendForm from "../../pages/api/contact-me";
 
-function ContactForm(props) {
-	const sendContactForm = props;
+function ContactForm() {
+
+	function sendForm(message) {
+		// event.preventDefault();
+		fetch('/api/contact-me', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(
+				{message: message,
+				})
+		})
+
+			.then((res) => res.json())
+			.then((data) => {console.log(data)});
+		// result.user => 'Ada Lovelace'
+		// console.log(result);
+	}
+
 	const nameInputRef = useRef();
 	const emailInputRef = useRef();
 	const descriptionInputRef = useRef();
 	function onChange(event) {
 		event.preventDefault();
 	}
-	function onSubmit(event) {
+	function submitMessageHandler(event) {
 		event.preventDefault();
 		const nameInput = nameInputRef.current.value;
 		const emailInput = emailInputRef.current.value;
@@ -21,12 +39,13 @@ function ContactForm(props) {
 			email: emailInput,
 			description: descriptionInput,
 		}
-		sendContactForm(message);
+		// console.log(message);
+		sendForm(message);
 	}
 		// console.log(message);
 
 	return (
-		<form className={styles.contactForm}/* onSubmit={sendForm}*/ onChange={onChange}>
+		<form className={styles.contactForm} onSubmit={submitMessageHandler} onChange={onChange}>
 			<div className={styles.control}>
 				<label htmlFor="name">Name: </label>
 				<input
@@ -61,7 +80,7 @@ function ContactForm(props) {
 				/>
 			</div>
 			<div className={styles.submitFormButton}>
-				<Button onSubmit={sendContactForm}>Submit</Button>
+				<Button>Submit</Button>
 			</div>
 		</form>
 	);

@@ -7,28 +7,28 @@ import ContactForm from "../../components/contact-me/contact-form";
 
 export default function ContactPage() {
 	// const {sendForm} = props;
-	async function sendForm (req, res) {
-
-		const result = await fetch('/api/contact-me', {
-			body: JSON.stringify(
-				{
-					message: {
-						name: name,
-						email: email,
-						description: description,
-					}
-				}),
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			method: 'POST'
-		})
-
-			.then((res) = res.json())
-			.then((data) => {console.log(data)});
-		// result.user => 'Ada Lovelace'
-		console.log(result);
-	}
+	// function sendForm(event) {
+	// 	event.preventDefault();
+	// 	fetch('/api/contact-me', {
+	// 		method: 'POST',
+	// 		headers: {
+	// 			'Content-Type': 'application/json'
+	// 		},
+	// 		body: JSON.stringify(
+	// 			{
+	// 				message: {
+	// 					name: name,
+	// 					email: email,
+	// 					description: description
+	// 				}
+	// 			})
+	// 	})
+	//
+	// 		.then((res) = res.json())
+	// 		.then((data) => {console.log(data)});
+	// 	// result.user => 'Ada Lovelace'
+	// 	// console.log(result);
+	// }
 	// sendForm();
 	// const nameInputRef = useRef();
 	// const emailInputRef = useRef();
@@ -41,7 +41,7 @@ export default function ContactPage() {
 			</Head>
 			<section className={styles.contact}>
 				<h1>Contact Me</h1>
-				<ContactForm submitMessageHandler={sendForm} />
+				<ContactForm /*submitMessageHandler={sendForm} message={message}*/ />
 				{/*<Modal>Hello</Modal>*/}
 				{/* <form>
 				<div className={styles.control}>
