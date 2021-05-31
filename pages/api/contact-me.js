@@ -1,7 +1,14 @@
+function emailValidate(string) {
+    const email = string.trim();
+    const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return pattern.test(email);
+}
+
 const handler = async (req, res) => {
     let newMessage = { };
-    if (req.method === 'POST') {
-        const {name, email, description} = req.body.message;
+    const {name, email, description} = req.body.message;
+
+    if (req.method === 'POST' && emailValidate(email)) {
         newMessage = {
             id: new Date().toISOString(),
             name: name,
