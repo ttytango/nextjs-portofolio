@@ -3,7 +3,8 @@
         width: 90vw;
         min-height: 40vw;
         margin: 2rem auto;
-        background: $color-tertiary-dark;
+        //background: $color-tertiary-dark;
+        background: lighten($black, 10%);
         padding: 1rem 0.4rem;
         border-radius: $default-card-border-radius*4;
         h1 {
@@ -50,7 +51,7 @@
 
     .textContainer {
         // background: linear-gradient(to bottom right, $dodger-blue 85%, $persian-blue 84%);
-        background: linear-gradient(to bottom, $color-tertiary-dark 20%, rgba($color-tertiary, 0.4), $color-tertiary-dark);
+        background: linear-gradient(to bottom, rgba($color-four-dark, 0.22) 2%, rgba($color-four-dark, 0.2) 20%, rgba($color-four-light, 0.7) 22% 50%, rgba($color-four-dark, 0.6) 94%);
         margin: 1rem 2rem;
         padding: 2rem;
         border-radius: $default-card-border-radius*4;
