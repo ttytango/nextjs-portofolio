@@ -17,14 +17,12 @@ function AboutMe() {
 					a deeper plunge into web development.
 				</p>
 				<p>
-
-						My immediate goals are to boost my knowledge of modern Frontend Web
-						Development to enter into the tech industry, and build upon
-						knowledge of what I already know.
+					<div className={styles.paraContainer}>
+						<p>Having graduated from an intensive bootcamp at _Nology some months ago. My goal is now to keep learning and keep developing!</p>
+					</div>
 					</p>
 				<p>
-					Prior to starting the bootcamp at _Nology in order to attain these
-					goals in early October 2020, I had already taught myself a great deal
+					Prior to starting the _Nology bootcamp in order to attain greater modern web development knowledge in early October 2020, I had already taught myself a great deal
 					of Python, eventually teaching myself the Django framework and Django
 					REST Framework for building API's. I have since moved towards using
 					ExpressJS and NextJS for this.
