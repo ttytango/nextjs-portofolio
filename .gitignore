@@ -29,6 +29,7 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+.env
 
 
 # vercel
@@ -36,5 +37,4 @@ yarn-error.log*
 
 # others
 todo.txt
-.env
-/string-formatter
+/string-formatter/
