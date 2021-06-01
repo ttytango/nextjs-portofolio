@@ -9,7 +9,8 @@ body {
 }
 
 body {
-    background: repeating-linear-gradient(to top left, #fff 10% 20%, #f3f3f3 25% 40%, #f8f7d1 40% 100%);
+    background: lighten($black, 20%);
+    // background: repeating-linear-gradient(to top left, #fff 10% 20%, #f3f3f3 25% 40%, #f8f7d1 40% 100%);
     // background: repeating-linear-gradient(to top left, $color-secondary 10% 20%, $color-secondary-light 25% 40%, $white 30% 80%);
     font-size: calc(10px + 2vmin);
     &:not(footer) {
