@@ -8,9 +8,7 @@ import Link from "next/link";
 // import useSWR from "swr";
 import { getAllProjects } from "../../helpers/api-utils";
 import styles from "./projectList.module.scss";
-// import SearchByKeyword from "../../components/projects/searchbox";
-// import Button from "../../components/ui/button";
-// import buttonStyles from "../../components/ui/button.module.scss";
+
 
 function ProjectItem(props) {
 	return (
@@ -33,7 +31,7 @@ function ProjectsPage(props) {
 	// const projectId = router.query.id;
 
 	// const { data, error } = useSWR(
-	// 	"https://portfolio-c7693-default-rtdb.europe-west1.firebasedatabase.app/projects.json"
+	// 	"https://portfolio-tjs-2-default-rtdb.europe-west1.firebasedatabase.app/projects.json"
 	// );
 
 	// useEffect(() => {

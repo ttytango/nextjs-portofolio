@@ -1,5 +1,5 @@
 export async function getAllProjects() {
-    const response = await fetch('https://portfolio-c7693-default-rtdb.europe-west1.firebasedatabase.app/projects.json');
+    const response = await fetch('https://portfolio-tjs-2-default-rtdb.europe-west1.firebasedatabase.app/projects.json');
     const data = await response.json();
 
     const projects = [];
