@@ -1,34 +1,48 @@
-import { MongoClient } from 'mongodb';
+import { connectToDatabase } from "../../helpers/db-utils";
 
 const handler = async(req, res) => {
     let newMessage = {};
 
-    const { name, email, description } = req.body.message;
+    const { name, email, description, timestamp } = req.body.message;
 
+    if (req.method !== 'POST') {
+        return;
+    }
 
     if (req.method === 'POST') {
+
         newMessage = {
-            // id: new Date().toISOString(),
             name: name,
             email: email,
-            description: description
+            description: description,
+            timestamp: timestamp,
         }
-        const client = await MongoClient.connect(process.env.ATLAS_URI, { useUnifiedTopology: true });
+
+        let client;
+        try {
+            client = await connectToDatabase();
+        } catch(error) {
+            res.status(500).json({message: 'Failed to connect to the database.' })
+            return;
+        }
+
+        // If code reaches here, it has made a successful connection to mongodb
 
         const db = client.db();
-        await db.collection('mail').insertOne({ mail: newMessage });
+        try {
+            const messageCollection = await db.collection('mail').insertOne({ mail: newMessage });
+            client.close();
+            res.status(201).json({ message: 'Successfully added message to database.' });
+        } catch (error) {
+            client.close()
+            res.status(500).json({ message: 'Database connected successfully but inserting message failed' });
+            return;
+        }
         // const userMessage = JSON.stringify(newMessage);
-        client.close();
-        res.status(201).json({ message: "success" });
 
-    } else {
-        client.close();
-        res.status(400).json({ message: "failed" });
+
     }
+
 
 }
 export default handler;
-//         headers: {
-//         'Content-Type': 'application/json'},
-// method: 'POST',
-// }}).then((res) = res.json()).then((data) => {console.log(data)});

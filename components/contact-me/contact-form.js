@@ -38,10 +38,14 @@ function ContactForm() {
 		const nameInput = nameInputRef.current.value;
 		const emailInput = emailInputRef.current.value;
 		const descriptionInput = descriptionInputRef.current.value;
+		const date = new Date();
+		const isoStringDate = date.toISOString();
+
 		const message = {
 			name: nameInput,
 			email: emailInput.trim(),
-			description: descriptionInput,
+			description: descriptionInput.trim(),
+			timestamp: isoStringDate
 		};
 		if (!emailValidate(message.email)) {
 			alert("Invalid Email");

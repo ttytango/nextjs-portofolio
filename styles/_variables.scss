@@ -1,7 +1,7 @@
-//$black: rgba(45, 15, 46, 0.69);
+// TO DO: DECIDE ON COLOURS & CLEAN UP
 $black: #0C1825;
-//$white: rgb(255, 245, 235);
 $white: #F3F4F6;
+// TO DO: Remove unused colours in this list
 $persian-blue: #072ac8ff;
 $dodger-blue: #1e96fcff;
 $uranian-blue: #a2d6f9ff;
@@ -23,7 +23,7 @@ $default-card-border-radius: 4px;
 $gradient: linear-gradient(to top right, $french-violet 2%, $slate-blue 14%, $tufts-blue, $blue-jeans, $vivid-sky-blue, $sky-blue-crayola 86%, $medium-turquoise 94%, $turquoise 98%);
 $default-box-shadow: 2px 2px 6px rgba(45, 15, 46, 0.69);
 
-/* SCSS HEX */
+/* Use This List of colours! */
 
 $amaranth-purple: #b7094cff;
 $jazzberry-jam: #a01a58ff;
@@ -58,7 +58,7 @@ $gradient-bottom-right: linear-gradient(135deg, #b7094cff, #a01a58ff, #892b64ff,
 $gradient-top-left: linear-gradient(225deg, #b7094cff, #a01a58ff, #892b64ff, #723c70ff, #5c4d7dff, #455e89ff, #2e6f95ff, #1780a1ff, #0091adff);
 $gradient-bottom-left: linear-gradient(315deg, #b7094cff, #a01a58ff, #892b64ff, #723c70ff, #5c4d7dff, #455e89ff, #2e6f95ff, #1780a1ff, #0091adff);
 $gradient-radial: radial-gradient(#b7094cff, #a01a58ff, #892b64ff, #723c70ff, #5c4d7dff, #455e89ff, #2e6f95ff, #1780a1ff, #0091adff);
-// FONT
+// FONTS
 $font-family-funky: "Obidee Sans",
 cursive;
 $font-family-oswald: Oswald,
