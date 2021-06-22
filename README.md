@@ -1,3 +1,14 @@
+### Notes from the Developer
+
+Upon cloning, but before following any of the instructions below. Remember to install the dependencies using:
+
+```bash
+npm run install
+```
+Although the Contact Form component functions with a MongoDB Atlas database, the 'ATLAS_URI' for the database found in the form handler is concealed in a .env file for obvious security reasons. This means that although it posts a completed and validated form when ran on my local machine, it will crash upon submitting a completed and valid form on other machines. If one was to want the posting method to work, a .env file needs to be created in the root directory featuring one's own MongoDB URI/credentials. The variable name should be ATLAS_URI.
+
+-----------------------------------------------
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
