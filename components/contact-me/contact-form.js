@@ -3,36 +3,22 @@ import styles from "./contact-form.module.scss";
 import Button from "../ui/button";
 // import sendForm from "../../pages/api/contact-me";
 
-function emailValidate(string) {
-	const email = string;
+async function emailValidate(string) {
+	const email = await string;
 	const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 	return pattern.test(email);
 }
 
-function ContactForm() {
-	function sendForm(message) {
-		// event.preventDefault();
-		fetch("/api/contact-me", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify({ message: message }),
-		})
-			.then((res) => res.json())
-			.then((data) => {
-				console.log(data);
-			});
-		// result.user => 'Ada Lovelace'
-		// console.log(result);
-	}
-
+export default function ContactForm(props) {
+	const {sendForm} = props;
 	const nameInputRef = useRef();
 	const emailInputRef = useRef();
 	const descriptionInputRef = useRef();
+
 	function onChange(event) {
 		event.preventDefault();
 	}
+
 	function submitMessageHandler(event) {
 		event.preventDefault();
 		const nameInput = nameInputRef.current.value;
@@ -44,7 +30,7 @@ function ContactForm() {
 		const message = {
 			name: nameInput,
 			email: emailInput.trim(),
-			description: descriptionInput.trim(),
+			description: descriptionInput,
 			timestamp: isoStringDate
 		};
 		if (!emailValidate(message.email)) {
@@ -56,7 +42,7 @@ function ContactForm() {
 			return;
 		}
 
-		sendForm(message);
+		props.sendForm(message);
 	}
 
 	return (
@@ -101,10 +87,9 @@ function ContactForm() {
 				/>
 			</div>
 			<div className={styles.submitFormButton}>
-				<Button>Submit</Button>
+				<Button type="submit">Submit</Button>
 			</div>
 		</form>
 	);
 }
 
-export default ContactForm;

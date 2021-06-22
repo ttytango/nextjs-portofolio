@@ -3,7 +3,7 @@ import { connectToDatabase } from "../../helpers/db-utils";
 const handler = async(req, res) => {
     let newMessage = {};
 
-    const { name, email, description, timestamp } = req.body.message;
+    const { name, email, description, timestamp } = req.body;
 
     if (req.method !== 'POST') {
         return;
