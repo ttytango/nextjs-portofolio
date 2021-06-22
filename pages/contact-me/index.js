@@ -5,7 +5,7 @@ import styles from "./contact-me.module.scss";
 import ContactForm from "../../components/contact-me/contact-form";
 // import sendForm from "../api/contact-me";
 
-function ContactPage() {
+function ContactPage(props) {
 
 	function sendFormHandler(messageData) {
 		// event.preventDefault();
@@ -29,7 +29,7 @@ function ContactPage() {
 			.catch((error) => {
 				console.log(error)
 			})
-			return result;
+
 
 	}
 
@@ -46,6 +46,16 @@ function ContactPage() {
 			</section>
 		</Fragment>
 	);
+}
+
+export async function getStaticProps(context) {
+
+	return {
+		props: {},
+		revalidate: 1200,
+	}
+
+
 }
 
 

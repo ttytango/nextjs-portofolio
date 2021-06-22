@@ -10,7 +10,6 @@ async function emailValidate(string) {
 }
 
 export default function ContactForm(props) {
-	const {sendForm} = props;
 	const nameInputRef = useRef();
 	const emailInputRef = useRef();
 	const descriptionInputRef = useRef();
